@@ -1,0 +1,40 @@
+// usbled.idl : IDL source for usbled.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (usbled.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(B21CEEEA-8E6C-4948-808D-36947C6FCF9B),
+		dual,
+		helpstring("ILed Interface"),
+		pointer_default(unique)
+	]
+	interface ILed : IDispatch
+	{
+		[id(1), helpstring("method Command")] HRESULT Command(int Value);
+		[id(2), helpstring("method Connect")] HRESULT Connect();
+	};
+
+[
+	uuid(EC955970-4ABC-4566-BA81-1D77E7BB6880),
+	version(1.0),
+	helpstring("usbled 1.0 Type Library")
+]
+library usbledLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(8F279928-297A-466A-B511-D00116713995),
+		helpstring("Led Class")
+	]
+	coclass Led
+	{
+		[default] interface ILed;
+	};
+};

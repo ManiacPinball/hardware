@@ -1,0 +1,26 @@
+HKCR
+{
+	USBLed.Controller.1 = s 'Led Class'
+	{
+		CLSID = s '{8F279928-297A-466A-B511-D00116713995}'
+	}
+	USBLed.Controller = s 'Led Class'
+	{
+		CLSID = s '{8F279928-297A-466A-B511-D00116713995}'
+		CurVer = s 'USBLed.Controller.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {8F279928-297A-466A-B511-D00116713995} = s 'Led Class'
+		{
+			ProgID = s 'USBLed.Controller.1'
+			VersionIndependentProgID = s 'USBLed.Controller'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			'TypeLib' = s '{EC955970-4ABC-4566-BA81-1D77E7BB6880}'
+		}
+	}
+}

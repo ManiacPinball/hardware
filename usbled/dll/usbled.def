@@ -1,0 +1,9 @@
+; usbled.def : Declares the module parameters.
+
+LIBRARY      "usbled.DLL"
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer	PRIVATE
