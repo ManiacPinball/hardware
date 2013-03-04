@@ -119,8 +119,8 @@ gTimerFreq = 60 ' global frequency timer set to 60 ms (use 100ms if your cpu is 
 On Error Resume Next
 
 'Set LedControl = CreateObject("LEDWiz_Control.LED_Wiz")
-Set LedControl = CreateObject("Test2.Led")
-LedControl.bla()
+Set LedControl = CreateObject("USBLed.Controller")
+LedControl.Connect()
 
 'If Err.number=0 then
 '  If LedControl.Detected>0 then 
