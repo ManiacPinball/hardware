@@ -1,0 +1,13 @@
+I will add a real README later. But for now some points:
+
+You can use this for your personal non commercial use.
+
+Currently the Com device used for the arduino is still hardcoded, therefore you have to adjust it before compiling the dll. Just open the Led.cpp and change COM10 in line 20 to your needs.
+
+In the arduino folder you will find the code which needs to be uploaded to your Arduino.
+
+In the eagle folder youl find the schematics and board layouts in eagle format.
+
+The pinjoy firmware is still missing, I'm trying currently to get the USB descriptor right for the 3 analog axis.
+
+The ledcontrol.vbs is a slightly modified version to use the usbled dll. I will update this file soon with the new version appeared recently.
