@@ -16,7 +16,7 @@ import "ocidl.idl";
 	interface ILed : IDispatch
 	{
 		[id(1), helpstring("method Command")] HRESULT Command(int Value);
-		[id(2), helpstring("method Connect")] HRESULT Connect();
+		[id(2), helpstring("method Connect")] HRESULT Connect(BSTR ComValue);
 	};
 
 [

@@ -28,10 +28,11 @@ END_COM_MAP()
 
 // ILed
 public:
-	STDMETHOD(Connect)();
+	STDMETHOD(Connect)(BSTR ComValue);
 	STDMETHOD(Command)(int Value);
 private:
 	HANDLE hSerial;
+	int iShiftCount;
 };
 
 #endif //__LED_H_
